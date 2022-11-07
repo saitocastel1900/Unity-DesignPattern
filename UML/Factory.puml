@@ -1,0 +1,18 @@
+﻿@startuml
+
+abstract EnemyCreator
+{
++Create()
+}
+
+abstract Enemy 
+note top of Enemy:ここに生成するオブジェに\n共通したことを
+
+class Auger
+class AugerCreator
+
+Enemy<|--Auger
+EnemyCreator<|--AugerCreator
+Auger<..AugerCreator
+
+@enduml
