@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class StateTest1 : MonoBehaviour
 {
@@ -48,18 +49,23 @@ public class StateTest1 : MonoBehaviour
 
     private void Idle()
     {
-        Debug.Log("Idle!");
+        Log("Idle");
     }
 
     private void Move()
     {
-        Debug.Log("Move!");
-        _state = State.Idle;
+        Log("Move");
+         _state = State.Idle;
     }
 
     private void Jump()
     {
-        Debug.Log("Jump!");
+        Log("Jump");
         _state = State.Idle;
+    }
+
+    private void Log(string value)
+    {
+        Debug.Log(value);
     }
 }
